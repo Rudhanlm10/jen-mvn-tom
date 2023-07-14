@@ -1,7 +1,7 @@
 pipeline {
     agent any
 	tools {
-      maven 'mvn-home'
+      maven 'mvn_home'
     }
     stages {
         stage('scm-checkout') {
@@ -10,7 +10,7 @@ pipeline {
 				url: 'https://github.com/Rudhanlm10/jen-mvn-tom.git'
             }
         }
-        stage('mvn-goal') {
+        stage('mvn_goal') {
             steps {
                 sh 'mvn clean compile test package'
             }
